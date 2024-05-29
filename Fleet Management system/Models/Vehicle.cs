@@ -51,7 +51,7 @@ public partial class Vehicle
         dict["LastGPSTime"] = lastRouteHistory?.Epoch?.ToString()??"no ditected time";
         dict["LastGPSSpeed"] = lastRouteHistory?.Vehiclespeed?.ToString() ?? "no deticted speed";
         dict["LastAddress"] = lastRouteHistory?.Address?.ToString()??"no deticted adress";
-        dict["LastPosition"] = lastRouteHistory?.GetPostion() ?? "not detected position"; 
+        dict["LastPosition"] = lastRouteHistory?.GetPosition() ?? "not detected position"; 
 
         gvarData.DicOfDic[dictName] = dict;
 

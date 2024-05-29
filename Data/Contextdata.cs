@@ -10,7 +10,12 @@ namespace Fleet_Management_system.Data
 
         public Contextdata(IConfiguration configuration)
         {
+<<<<<<< Updated upstream
             Configuration = configuration;
+=======
+            Configuration = configuration; 
+
+>>>>>>> Stashed changes
         }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
@@ -24,6 +29,28 @@ namespace Fleet_Management_system.Data
         public DbSet<Fleet_Management_system.Models.Driver> Driver { get; set; } = default!;
         public DbSet<Fleet_Management_system.Models.Circlegeofence> Circlegeofence { get; set; } = default!;
         public DbSet<Fleet_Management_system.Models.Vehiclesinformation> Vehiclesinformation { get; set; } = default!;
+<<<<<<< Updated upstream
+=======
+        protected override void OnModelCreating(ModelBuilder modelBuilder){
+            modelBuilder.Entity<Vehicle>()
+                .HasOne(v => v.VehicleInformation)
+                .WithOne(vi => vi.Vehicle)
+                .HasForeignKey<Vehiclesinformation>(vi => vi.Vehicleid)
+                .OnDelete(DeleteBehavior.Cascade);  
+
+            modelBuilder.Entity<Vehicle>()
+                .HasMany(vi => vi.Routehistories)
+                .WithOne(rh => rh.Vehicle)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Driver>()
+                 .HasMany(d => d.Vehicles)
+                 .WithOne(v => v.Driver)
+                 .HasForeignKey(v => v.Driverid)
+                 .OnDelete(DeleteBehavior.Cascade);
+
+        }
+>>>>>>> Stashed changes
 
     }
 }
