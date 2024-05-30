@@ -18,6 +18,7 @@ The Fleet Management System is an application designed to help track and manage 
 - **Route Tracking:**
   - Display route history for vehicles.
   - Track vehicle positions and statuses in real-time.
+  - Add route history for vehicles.
 
 - **Geofence Management:**
   - Create and manage geofences (circular, polygon, and rectangular).
