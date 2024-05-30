@@ -164,13 +164,13 @@ namespace Fleet_Management_system.Controllers
                                             .FirstOrDefaultAsync(v => v.Vehicleid == id);
                 if (vehicle == null)
                 {
-                    return NotFound("Vehicle not found.");
+                    return NotFound(new { STS = 0, MSG = "Vehicle not found." });
                 }
 
                 var driver = await _context.Driver.FindAsync(driverId);
                 if (driver == null)
                 {
-                    return NotFound("Driver not found.");
+                    return NotFound(new { STS = 0, MSG = "Driver not found." });
                 }
 
                 vehicle.Vehiclenumber = vehicleNumber;
@@ -188,13 +188,13 @@ namespace Fleet_Management_system.Controllers
                 var message = JsonSerializer.Serialize(new { Action = "Update", Data = vehicle }, _jsonOptions);
                 _webSocketManager.Broadcast(message);
 
-                return NoContent();
+                return Ok(new { STS = 1, MSG = "Vehicle updated successfully." });
             }
             catch (Exception ex)
             {
                 Console.Error.WriteLine($"Internal server error: {ex.Message}");
                 Console.Error.WriteLine(ex.StackTrace);
-                return StatusCode(500, "Internal server error: " + ex.Message);
+                return StatusCode(500, new { STS = 0, Error = "Internal server error: " + ex.Message });
             }
         }
 
@@ -213,7 +213,7 @@ namespace Fleet_Management_system.Controllers
                 _context.Vehicle.Remove(vehicle);
                 await _context.SaveChangesAsync();
 
-                return NoContent();
+                return Ok(new { STS = 1, MSG = "Vehicle deleted successfully" });
             }
             catch (Exception ex)
             {
@@ -223,4 +223,5 @@ namespace Fleet_Management_system.Controllers
             }
         }
     }
-}
+
+    }

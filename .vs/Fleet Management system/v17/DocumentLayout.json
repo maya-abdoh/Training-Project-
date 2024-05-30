@@ -1,0 +1,217 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\coding\\Fleet Management system\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E2869FC8-F74E-485B-BE0C-D4738D26684D}|Fleet Management system\\Fleet Management system.csproj|d:\\coding\\fleet management system\\fleet management system\\models\\rectanglegeofence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2869FC8-F74E-485B-BE0C-D4738D26684D}|Fleet Management system\\Fleet Management system.csproj|solutionrelative:fleet management system\\models\\rectanglegeofence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2869FC8-F74E-485B-BE0C-D4738D26684D}|Fleet Management system\\Fleet Management system.csproj|d:\\coding\\fleet management system\\fleet management system\\models\\polygongeofence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2869FC8-F74E-485B-BE0C-D4738D26684D}|Fleet Management system\\Fleet Management system.csproj|solutionrelative:fleet management system\\models\\polygongeofence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2869FC8-F74E-485B-BE0C-D4738D26684D}|Fleet Management system\\Fleet Management system.csproj|d:\\coding\\fleet management system\\fleet management system\\controllers\\routehistoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2869FC8-F74E-485B-BE0C-D4738D26684D}|Fleet Management system\\Fleet Management system.csproj|solutionrelative:fleet management system\\controllers\\routehistoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2869FC8-F74E-485B-BE0C-D4738D26684D}|Fleet Management system\\Fleet Management system.csproj|d:\\coding\\fleet management system\\fleet management system\\controllers\\rectanglegeofencescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2869FC8-F74E-485B-BE0C-D4738D26684D}|Fleet Management system\\Fleet Management system.csproj|solutionrelative:fleet management system\\controllers\\rectanglegeofencescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2869FC8-F74E-485B-BE0C-D4738D26684D}|Fleet Management system\\Fleet Management system.csproj|d:\\coding\\fleet management system\\fleet management system\\controllers\\circlegeofencescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2869FC8-F74E-485B-BE0C-D4738D26684D}|Fleet Management system\\Fleet Management system.csproj|solutionrelative:fleet management system\\controllers\\circlegeofencescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2869FC8-F74E-485B-BE0C-D4738D26684D}|Fleet Management system\\Fleet Management system.csproj|d:\\coding\\fleet management system\\fleet management system\\controllers\\vehiclescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2869FC8-F74E-485B-BE0C-D4738D26684D}|Fleet Management system\\Fleet Management system.csproj|solutionrelative:fleet management system\\controllers\\vehiclescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2869FC8-F74E-485B-BE0C-D4738D26684D}|Fleet Management system\\Fleet Management system.csproj|d:\\coding\\fleet management system\\fleet management system\\models\\driver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2869FC8-F74E-485B-BE0C-D4738D26684D}|Fleet Management system\\Fleet Management system.csproj|solutionrelative:fleet management system\\models\\driver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2869FC8-F74E-485B-BE0C-D4738D26684D}|Fleet Management system\\Fleet Management system.csproj|d:\\coding\\fleet management system\\fleet management system\\controllers\\driverscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2869FC8-F74E-485B-BE0C-D4738D26684D}|Fleet Management system\\Fleet Management system.csproj|solutionrelative:fleet management system\\controllers\\driverscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2869FC8-F74E-485B-BE0C-D4738D26684D}|Fleet Management system\\Fleet Management system.csproj|d:\\coding\\fleet management system\\fleet management system\\controllers\\geofencescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2869FC8-F74E-485B-BE0C-D4738D26684D}|Fleet Management system\\Fleet Management system.csproj|solutionrelative:fleet management system\\controllers\\geofencescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2869FC8-F74E-485B-BE0C-D4738D26684D}|Fleet Management system\\Fleet Management system.csproj|d:\\coding\\fleet management system\\fleet management system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2869FC8-F74E-485B-BE0C-D4738D26684D}|Fleet Management system\\Fleet Management system.csproj|solutionrelative:fleet management system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2869FC8-F74E-485B-BE0C-D4738D26684D}|Fleet Management system\\Fleet Management system.csproj|d:\\coding\\fleet management system\\fleet management system\\models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2869FC8-F74E-485B-BE0C-D4738D26684D}|Fleet Management system\\Fleet Management system.csproj|solutionrelative:fleet management system\\models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2869FC8-F74E-485B-BE0C-D4738D26684D}|Fleet Management system\\Fleet Management system.csproj|d:\\coding\\fleet management system\\fleet management system\\data\\contextdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2869FC8-F74E-485B-BE0C-D4738D26684D}|Fleet Management system\\Fleet Management system.csproj|solutionrelative:fleet management system\\data\\contextdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Rectanglegeofence.cs",
+              "DocumentMoniker": "D:\\coding\\Fleet Management system\\Fleet Management system\\Models\\Rectanglegeofence.cs",
+              "RelativeDocumentMoniker": "Fleet Management system\\Models\\Rectanglegeofence.cs",
+              "ToolTip": "D:\\coding\\Fleet Management system\\Fleet Management system\\Models\\Rectanglegeofence.cs",
+              "RelativeToolTip": "Fleet Management system\\Models\\Rectanglegeofence.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAkwCAAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T00:47:30.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Polygongeofence.cs",
+              "DocumentMoniker": "D:\\coding\\Fleet Management system\\Fleet Management system\\Models\\Polygongeofence.cs",
+              "RelativeDocumentMoniker": "Fleet Management system\\Models\\Polygongeofence.cs",
+              "ToolTip": "D:\\coding\\Fleet Management system\\Fleet Management system\\Models\\Polygongeofence.cs",
+              "RelativeToolTip": "Fleet Management system\\Models\\Polygongeofence.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T00:47:25.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RectanglegeofencesController.cs",
+              "DocumentMoniker": "D:\\coding\\Fleet Management system\\Fleet Management system\\Controllers\\RectanglegeofencesController.cs",
+              "RelativeDocumentMoniker": "Fleet Management system\\Controllers\\RectanglegeofencesController.cs",
+              "ToolTip": "D:\\coding\\Fleet Management system\\Fleet Management system\\Controllers\\RectanglegeofencesController.cs",
+              "RelativeToolTip": "Fleet Management system\\Controllers\\RectanglegeofencesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T00:34:16.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CirclegeofencesController.cs",
+              "DocumentMoniker": "D:\\coding\\Fleet Management system\\Fleet Management system\\Controllers\\CirclegeofencesController.cs",
+              "RelativeDocumentMoniker": "Fleet Management system\\Controllers\\CirclegeofencesController.cs",
+              "ToolTip": "D:\\coding\\Fleet Management system\\Fleet Management system\\Controllers\\CirclegeofencesController.cs",
+              "RelativeToolTip": "Fleet Management system\\Controllers\\CirclegeofencesController.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABsAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T00:28:25.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RoutehistoriesController.cs",
+              "DocumentMoniker": "D:\\coding\\Fleet Management system\\Fleet Management system\\Controllers\\RoutehistoriesController.cs",
+              "RelativeDocumentMoniker": "Fleet Management system\\Controllers\\RoutehistoriesController.cs",
+              "ToolTip": "D:\\coding\\Fleet Management system\\Fleet Management system\\Controllers\\RoutehistoriesController.cs",
+              "RelativeToolTip": "Fleet Management system\\Controllers\\RoutehistoriesController.cs",
+              "ViewState": "AQIAAGUAAAAAAAAAAAAUwHsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T00:28:16.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VehiclesController.cs",
+              "DocumentMoniker": "D:\\coding\\Fleet Management system\\Fleet Management system\\Controllers\\VehiclesController.cs",
+              "RelativeDocumentMoniker": "Fleet Management system\\Controllers\\VehiclesController.cs",
+              "ToolTip": "D:\\coding\\Fleet Management system\\Fleet Management system\\Controllers\\VehiclesController.cs",
+              "RelativeToolTip": "Fleet Management system\\Controllers\\VehiclesController.cs",
+              "ViewState": "AQIAANYAAAAAAAAAAAAcwOMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T00:08:56.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Driver.cs",
+              "DocumentMoniker": "D:\\coding\\Fleet Management system\\Fleet Management system\\Models\\Driver.cs",
+              "RelativeDocumentMoniker": "Fleet Management system\\Models\\Driver.cs",
+              "ToolTip": "D:\\coding\\Fleet Management system\\Fleet Management system\\Models\\Driver.cs",
+              "RelativeToolTip": "Fleet Management system\\Models\\Driver.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAowCYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T00:00:35.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DriversController.cs",
+              "DocumentMoniker": "D:\\coding\\Fleet Management system\\Fleet Management system\\Controllers\\DriversController.cs",
+              "RelativeDocumentMoniker": "Fleet Management system\\Controllers\\DriversController.cs",
+              "ToolTip": "D:\\coding\\Fleet Management system\\Fleet Management system\\Controllers\\DriversController.cs",
+              "RelativeToolTip": "Fleet Management system\\Controllers\\DriversController.cs",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAUwG0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T23:58:48.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GeofencesController.cs",
+              "DocumentMoniker": "D:\\coding\\Fleet Management system\\Fleet Management system\\Controllers\\GeofencesController.cs",
+              "RelativeDocumentMoniker": "Fleet Management system\\Controllers\\GeofencesController.cs",
+              "ToolTip": "D:\\coding\\Fleet Management system\\Fleet Management system\\Controllers\\GeofencesController.cs",
+              "RelativeToolTip": "Fleet Management system\\Controllers\\GeofencesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T23:52:28.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\coding\\Fleet Management system\\Fleet Management system\\Program.cs",
+              "RelativeDocumentMoniker": "Fleet Management system\\Program.cs",
+              "ToolTip": "D:\\coding\\Fleet Management system\\Fleet Management system\\Program.cs",
+              "RelativeToolTip": "Fleet Management system\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T22:04:46.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Vehicle.cs",
+              "DocumentMoniker": "D:\\coding\\Fleet Management system\\Fleet Management system\\Models\\Vehicle.cs",
+              "RelativeDocumentMoniker": "Fleet Management system\\Models\\Vehicle.cs",
+              "ToolTip": "D:\\coding\\Fleet Management system\\Fleet Management system\\Models\\Vehicle.cs",
+              "RelativeToolTip": "Fleet Management system\\Models\\Vehicle.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAswCUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T20:19:49.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Contextdata.cs",
+              "DocumentMoniker": "D:\\coding\\Fleet Management system\\Fleet Management system\\Data\\Contextdata.cs",
+              "RelativeDocumentMoniker": "Fleet Management system\\Data\\Contextdata.cs",
+              "ToolTip": "D:\\coding\\Fleet Management system\\Fleet Management system\\Data\\Contextdata.cs",
+              "RelativeToolTip": "Fleet Management system\\Data\\Contextdata.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAowC8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T18:47:08.407Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
