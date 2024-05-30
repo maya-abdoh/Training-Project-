@@ -86,64 +86,72 @@ namespace Fleet_Management_system.Controllers
 
 
 
-        [HttpPost]
-        public async Task<IActionResult> PostVehicle([FromBody] GVAR gvar)
+      [HttpPost]
+public async Task<IActionResult> PostVehicle([FromBody] GVAR gvar)
+{
+    try
+    {
+        if (gvar == null || !gvar.DicOfDic.ContainsKey("DATA"))
         {
-            try
-            {
-                if (gvar == null || !gvar.DicOfDic.ContainsKey("DATA"))
-                {
-                    return BadRequest(new { STS = 0, Error = "Invalid payload structure" });
-                }
-
-                var data = gvar.DicOfDic["DATA"];
-
-                if (!long.TryParse(data["driverId"], out long driverId) ||
-                    !long.TryParse(data["PurchaseDate"], out long purchaseDate) ||
-                    !long.TryParse(data["VehicleNumber"], out long vehicleNumber))
-                {
-                    return BadRequest(new { STS = 0, Error = "Invalid data types in payload" });
-                }
-
-                string vehicleType = data.ContainsKey("VehicleType") ? data["VehicleType"] : null;
-                string vehicleMake = data["VehicleMake"];
-                string vehicleModel = data["VehicleModel"];
-
-                var driver = await _context.Driver.FindAsync(driverId);
-                if (driver == null)
-                {
-                    return NotFound(new { STS = 0, Error = "Driver does not exist." });
-                }
-
-                var newVehicle = new Vehicle
-                {
-                    Vehiclenumber = vehicleNumber,
-                    Vehicletype = vehicleType,
-                    VehicleInformation = new Vehiclesinformation
-                    {
-                        Driver = driver,
-                        Vehiclemake = vehicleMake,
-                        Vehiclemodel = vehicleModel,
-                        Purchasedate = purchaseDate
-                    }
-                };
-
-                _context.Vehicle.Add(newVehicle);
-                await _context.SaveChangesAsync();
-
-                var message = JsonSerializer.Serialize(new { Action = "Add", Data = newVehicle }, _jsonOptions);
-                _webSocketManager.Broadcast(message);
-
-                return Ok(new { STS = 1, MSG = "Vehicle added successfully" });
-            }
-            catch (Exception ex)
-            {
-                Console.Error.WriteLine($"Internal server error: {ex.Message}");
-                Console.Error.WriteLine(ex.StackTrace);
-                return StatusCode(500, new { STS = 0, Error = "Internal server error: " + ex.Message });
-            }
+            return BadRequest(new { STS = 0, Error = "Invalid payload structure" });
         }
 
+        var data = gvar.DicOfDic["DATA"];
+
+        if (!long.TryParse(data["driverId"], out long driverId) ||
+            !long.TryParse(data["PurchaseDate"], out long purchaseDate) ||
+            !long.TryParse(data["VehicleNumber"], out long vehicleNumber))
+        {
+            return BadRequest(new { STS = 0, Error = "Invalid data types in payload" });
+        }
+
+        string vehicleType = data.ContainsKey("VehicleType") ? data["VehicleType"] : null;
+        string vehicleMake = data["VehicleMake"];
+        string vehicleModel = data["VehicleModel"];
+
+        var driver = await _context.Driver.FindAsync(driverId);
+        if (driver == null)
+        {
+            return NotFound(new { STS = 0, Error = "Driver does not exist." });
+        }
+
+        var newVehicle = new Vehicle
+        {
+            Vehiclenumber = vehicleNumber,
+            Vehicletype = vehicleType,
+            VehicleInformation = new Vehiclesinformation
+            {
+                Driver = driver,
+                Vehiclemake = vehicleMake,
+                Vehiclemodel = vehicleModel,
+                Purchasedate = purchaseDate
+            }
+        };
+
+        _context.Vehicle.Add(newVehicle);
+
+        Console.WriteLine("Before saving changes:");
+        Console.WriteLine(JsonSerializer.Serialize(newVehicle, _jsonOptions));
+
+        await _context.SaveChangesAsync();
+
+        var message = JsonSerializer.Serialize(new { Action = "Add", Data = newVehicle }, _jsonOptions);
+        _webSocketManager.Broadcast(message);
+
+        return Ok(new { STS = 1, MSG = "Vehicle added successfully" });
+    }
+    catch (Exception ex)
+    {
+        Console.Error.WriteLine($"Internal server error: {ex.Message}");
+        if (ex.InnerException != null)
+        {
+            Console.Error.WriteLine($"Inner exception: {ex.InnerException.Message}");
+            Console.Error.WriteLine(ex.InnerException.StackTrace);
+        }
+        Console.Error.WriteLine(ex.StackTrace);
+        return StatusCode(500, new { STS = 0, Error = "Internal server error: " + ex.Message });
+    }
+}
         [HttpPut("{id}")]
         public async Task<IActionResult> PutVehicle(long id, [FromBody] GVAR gvar)
         {
