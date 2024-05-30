@@ -1,0 +1,31 @@
+<mat-card class="vehicle-card">
+  <mat-card-content class="vehicle-content">
+    <div class="vehicle-details">
+      <div class="vehicle-info">
+        <h2>Vehicle Details :</h2>
+        <p><strong>Vehicle Number:</strong> {{ vehicle?.VehicleNumber || 'Not Available' }}</p>
+        <p><strong>Vehicle Type:</strong> {{ vehicle?.VehicleType || 'Not Available' }}</p>
+        <p><strong>Driver Name:</strong></p>
+        <mat-form-field appearance="fill" class="driver-name-field">
+          <mat-label>Driver Name</mat-label>
+          <mat-select [(value)]="selectedDriverId">
+            <mat-option *ngFor="let driver of drivers" [value]="driver.driverid">
+              {{ driver.drivername }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <p><strong>Phone Number:</strong> {{ vehicle?.PhoneNumber || 'Not Available' }}</p>
+        <p><strong>Vehicle Make:</strong> {{ vehicle?.VehicleMake || 'Not Available' }}</p>
+        <p><strong>Vehicle Model:</strong> {{ vehicle?.VehicleModel || 'Not Available' }}</p>
+        <p><strong>Purchase Date:</strong> {{ vehicle?.PurchaseDate || 'Not Available' }}</p>
+        <p><strong>Last GPS Time:</strong> {{ getFormattedDate(vehicle?.LastGPSTime) || 'Not Available' }}</p>
+        <p><strong>Last GPS Speed:</strong> {{ vehicle?.LastGPSSpeed || 'Not Available' }}</p>
+        <p><strong>Last Address:</strong> {{ vehicle?.LastAddress || 'Not Available' }}</p>
+        <p><strong>Last Position:</strong> {{ vehicle?.LastPosition || 'Not Available' }}</p>
+      </div>
+      <div class="vehicle-image">
+        <img src="assets/car.png" alt="Vehicle Image">
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

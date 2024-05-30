@@ -1,0 +1,63 @@
+.vehicle-card, .geofence-card {
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-bar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1e1d1d;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: #1e1d1d !important;
+}
+
+.menu-button {
+  color: #fff !important;
+  background-color: #1e1d1d !important;
+}
+
+.menu-button:hover {
+  border-bottom: 2px solid #fff !important;
+}
+
+mat-card {
+  padding: 20px;
+  margin-top: 80px;
+}
+
+.table-container {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-header-cell {
+  font-weight: bold;
+}
+
+.mat-elevation-z8 {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between; 
+  gap: 10px;
+  flex-wrap: nowrap; 
+}
+
+button.mat-button:hover {
+  border-bottom: 2px solid #3c3b3b;
+}

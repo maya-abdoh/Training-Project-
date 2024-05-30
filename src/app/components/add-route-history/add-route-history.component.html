@@ -1,0 +1,49 @@
+<div class="form-container">
+  <h2 id="header">Add Route History</h2>
+  <form [formGroup]="routeHistoryForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Vehicle Number</mat-label>
+      <mat-select formControlName="vehicleID" required>
+        <mat-option value="" disabled>Select Vehicle</mat-option>
+        <mat-option *ngFor="let vehicle of vehicles" [value]="vehicle.vehicleid">{{ vehicle.vehiclenumber }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <p class="input-label">Timestamp</p>
+      <input matInput formControlName="gpsTime" type="text" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <p class="input-label">Location</p>
+      <input matInput formControlName="address" type="text" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <p class="input-label">Latitude</p>
+      <input matInput formControlName="latitude" type="number" step="any" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <p class="input-label">Longitude</p>
+      <input matInput formControlName="longitude" type="number" step="any" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <p class="input-label">Vehicle Direction</p>
+      <input matInput formControlName="vehicleDirection" type="number" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <p class="input-label">Status</p>
+      <input matInput formControlName="status" type="text" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <p class="input-label">Speed</p>
+      <input matInput formControlName="gpsSpeed" type="number" required>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="!routeHistoryForm.valid">Add Route History</button>
+  </form>
+</div>

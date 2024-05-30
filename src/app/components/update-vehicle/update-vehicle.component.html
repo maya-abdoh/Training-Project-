@@ -1,0 +1,36 @@
+<div class="form-container">
+  <h2 id="header">Update Vehicle</h2>
+  <form [formGroup]="vehicleForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Vehicle Number</mat-label>
+      <input matInput formControlName="VehicleNumber" type="text" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Driver ID</mat-label>
+      <input matInput formControlName="DriverId" type="text" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Vehicle Type</mat-label>
+      <input matInput formControlName="VehicleType" type="text" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Vehicle Model</mat-label>
+      <input matInput formControlName="VehicleModel" type="text" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Vehicle Make</mat-label>
+      <input matInput formControlName="VehicleMake" type="text" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Purchase Date</mat-label>
+      <input matInput formControlName="PurchaseDate" type="text" required>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="!vehicleForm.valid">Update Vehicle</button>
+  </form>
+</div>

@@ -1,0 +1,38 @@
+<div class="form-container">
+  <h2 id="header">Add New Vehicle</h2>
+  <form [formGroup]="vehicleForm" (ngSubmit)="addVehicle()">
+    <mat-form-field appearance="fill">
+      <mat-label>Driver ID</mat-label>
+      <input matInput formControlName="DriverId" type="number" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Vehicle Number</mat-label>
+      <input matInput formControlName="VehicleNumber" type="text" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Vehicle Type</mat-label>
+      <input matInput formControlName="VehicleType" type="text" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Vehicle Make</mat-label>
+      <input matInput formControlName="VehicleMake" type="text" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Vehicle Model</mat-label>
+      <input matInput formControlName="VehicleModel" type="text" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Purchase Date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="PurchaseDate">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="!vehicleForm.valid">Add Vehicle</button>
+  </form>
+</div>

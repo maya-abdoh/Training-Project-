@@ -1,0 +1,41 @@
+.driver-card {
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+  }
+  
+  .table-container {
+    max-height: 240px;
+    overflow-y: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .mat-header-cell {
+    font-weight: bold;
+  }
+  
+  .mat-elevation-z8 {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  button.mat-button {
+    background-color: transparent;
+    border: none;
+    color: #3c3b3b;
+  }
+  
+  button.mat-button:hover {
+    border: none; 
+  }
+  

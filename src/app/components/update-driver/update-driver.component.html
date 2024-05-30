@@ -1,0 +1,16 @@
+<div class="form-container">
+  <h2 id="header">Update Driver</h2>
+  <form [formGroup]="updateDriverForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <p class="input-label">Driver Name</p>
+      <input matInput id="driverName" formControlName="driverName" type="text" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <p class="input-label">Phone Number</p>
+      <input matInput id="phoneNumber" formControlName="phoneNumber" type="text" required>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="!updateDriverForm.valid">Update Driver</button>
+  </form>
+</div>
