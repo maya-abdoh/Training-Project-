@@ -124,41 +124,61 @@ namespace Fleet_Management_system.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> PostRouteHistory([FromBody] GVAR gvar)
-        {
-            var data = gvar.DicOfDic["DATA"];
-            var keys = data.Keys;
-            List<string> requiredKeys = new List<string> { "vehicleID", "vehicleDirection", "status", "gpsTime", "address", "latitude", "longitude", "gpsSpeed" };
+ public async Task<IActionResult> PostRouteHistory([FromBody] GVAR gvar)
+ {
+     try
+     {
+         var data = gvar.DicOfDic["DATA"];
+         var keys = data.Keys;
+         List<string> requiredKeys = new List<string> { "vehicleID", "vehicleDirection", "status", "gpsTime", "address", "latitude", "longitude", "gpsSpeed" };
 
-            if (!requiredKeys.All(requiredKey => keys.Contains(requiredKey)))
-            {
-                return BadRequest("Missing or empty RouteHistory data.");
-            }
+         if (!requiredKeys.All(requiredKey => keys.Contains(requiredKey)))
+         {
+             return BadRequest("Missing or empty RouteHistory data.");
+         }
 
-            var vehicleId = Convert.ToInt64(data["vehicleID"]);
-            var vehicle = await _context.Vehicle.FindAsync(vehicleId);
-            if (vehicle == null)
-            {
-                return BadRequest("This vehicle does not exist.");
-            }
+         var vehicleId = Convert.ToInt64(data["vehicleID"]);
+         var vehicle = await _context.Vehicle.FindAsync(vehicleId);
+         if (vehicle == null)
+         {
+             return BadRequest("This vehicle does not exist.");
+         }
 
-            var routeHistory = new Routehistory
-            {
-                Vehicleid = vehicleId,
-                Vehicledirection = Convert.ToInt32(data["vehicleDirection"]),
-                Status = data["status"][0],
-                Epoch = Convert.ToInt64(data["gpsTime"]),
-                Address = data["address"],
-                Latitude = Convert.ToSingle(data["latitude"]),
-                Longitude = Convert.ToSingle(data["longitude"]),
-                Vehiclespeed = Convert.ToInt64(data["gpsSpeed"])
-            };
+         var epoch = Convert.ToInt64(data["gpsTime"]);
 
-            vehicle.Routehistories.Add(routeHistory);
-            await _context.SaveChangesAsync();
+         Console.WriteLine($"VehicleID: {vehicleId}, Epoch: {epoch}");
 
-            _webSocketManagerService.Broadcast("new history created");
-            return CreatedAtAction("GetRouteHistory", new { STS = 1 });
-        }
-    }
+         var existingRouteHistory = await _context.Routehistory
+             .FirstOrDefaultAsync(r => r.Vehicleid == vehicleId && r.Epoch == epoch);
+
+         if (existingRouteHistory != null)
+         {
+             return Conflict(new { sts = 0, error = "A route history entry with the same vehicleId and epoch already exists." });
+         }
+
+         var routeHistory = new Routehistory
+         {
+             Vehicleid = vehicleId,
+             Vehicledirection = Convert.ToInt32(data["vehicleDirection"]),
+             Status = data["status"][0],
+             Epoch = epoch,
+             Address = data["address"],
+             Latitude = Convert.ToSingle(data["latitude"]),
+             Longitude = Convert.ToSingle(data["longitude"]),
+             Vehiclespeed = Convert.ToInt64(data["gpsSpeed"])
+         };
+
+         Console.WriteLine($"New RouteHistory: {JsonConvert.SerializeObject(routeHistory)}");
+
+         _context.Routehistory.Add(routeHistory);
+         await _context.SaveChangesAsync();
+         _webSocketManagerService.Broadcast("new history created");
+         return CreatedAtAction("GetRouteHistory", new { sts = 1 });
+     }
+     catch (DbUpdateException ex)
+     {
+         Console.WriteLine($"DbUpdateException: {ex.InnerException?.Message ?? ex.Message}");
+         return StatusCode(500, new { sts = 0, error = ex.InnerException?.Message ?? ex.Message });
+     }
+ }
 }
