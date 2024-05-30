@@ -1,0 +1,23 @@
+<table mat-table [dataSource]="drivers" class="mat-elevation-z8">
+  <ng-container matColumnDef="driverid">
+    <th mat-header-cell *matHeaderCellDef> driver id. </th>
+    <td mat-cell *matCellDef="let element"> {{element.driverid}} </td>
+  </ng-container>
+  <ng-container matColumnDef="drivername">
+    <th mat-header-cell *matHeaderCellDef> driver name</th>
+    <td mat-cell *matCellDef="let element"> {{element.drivername}} </td>
+  </ng-container>
+  <ng-container matColumnDef="phonenumber">
+    <th mat-header-cell *matHeaderCellDef> phonenumber </th>
+    <td mat-cell *matCellDef="let element"> {{element.phonenumber}} </td>
+  </ng-container>
+  <ng-container matColumnDef="edit">
+    <th mat-header-cell *matHeaderCellDef> Edit </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-button (click)="editDriver(element.driverid)">Edit</button>
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>

@@ -1,0 +1,54 @@
+.vehicle-card {
+  margin: 20px;
+  max-width: 1100px; 
+  margin-left: 240px;
+  margin-right: auto;
+  background: none; 
+  box-shadow: none; 
+  padding: 0; 
+}
+
+.vehicle-content {
+  display: flex;
+  background: none; 
+  padding: 0; 
+}
+
+.vehicle-details {
+  display: flex;
+  flex-direction: row; 
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 45px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff; 
+  width: 1000px; 
+  height: 600px; 
+}
+
+.vehicle-info {
+  flex: 1;
+  margin-left: 60px;
+  padding-top: 20px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.vehicle-info p {
+  margin: 10px 0;
+}
+
+.vehicle-image {
+  flex: 1;
+  text-align: right; 
+  padding-top: 30px;
+}
+
+.vehicle-image img {
+  max-width: 450px;
+  height: 400px;
+}
+.driver-name-field {
+  width: 300px; 
+}

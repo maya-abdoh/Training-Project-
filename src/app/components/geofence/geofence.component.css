@@ -1,0 +1,27 @@
+.geofence-card {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .table-container {
+    max-height: 300px; 
+    overflow-y: auto;  
+  }
+  
+  .mat-elevation-z8 {
+    box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.2), 0px 1px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  .mat-table-scroll {
+    max-height: 400px;
+    overflow-y: auto;  
+  }
+  
+  .full-width-table {
+    width: 100%; 
+  }
+  

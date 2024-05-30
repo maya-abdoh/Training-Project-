@@ -1,0 +1,45 @@
+<mat-card class="geofence-card">
+  <mat-card-content>
+    <h2>Geofence List</h2>
+    <div class="table-container">
+      <div class="mat-table-scroll">
+        <table mat-table [dataSource]="geofences" class="mat-elevation-z8">
+          <ng-container matColumnDef="geofenceID">
+            <th mat-header-cell *matHeaderCellDef> Geofence ID </th>
+            <td mat-cell *matCellDef="let geofence"> {{geofence.geofenceid}} </td>
+          </ng-container>
+          <ng-container matColumnDef="geofenceType">
+            <th mat-header-cell *matHeaderCellDef> Geofence Type </th>
+            <td mat-cell *matCellDef="let geofence"> {{geofence.geofencetype}} </td>
+          </ng-container>
+          <ng-container matColumnDef="addedDate">
+            <th mat-header-cell *matHeaderCellDef> Added Date </th>
+            <td mat-cell *matCellDef="let geofence"> {{geofence.addeddate | date}} </td>
+          </ng-container>
+          <ng-container matColumnDef="strokeColor">
+            <th mat-header-cell *matHeaderCellDef> Stroke Color </th>
+            <td mat-cell *matCellDef="let geofence"> {{geofence.strokecolor}} </td>
+          </ng-container>
+          <ng-container matColumnDef="strokeOpacity">
+            <th mat-header-cell *matHeaderCellDef> Stroke Opacity </th>
+            <td mat-cell *matCellDef="let geofence"> {{geofence.strokeopacity}} </td>
+          </ng-container>
+          <ng-container matColumnDef="strokeWeight">
+            <th mat-header-cell *matHeaderCellDef> Stroke Weight </th>
+            <td mat-cell *matCellDef="let geofence"> {{geofence.strokeweight}} </td>
+          </ng-container>
+          <ng-container matColumnDef="fillColor">
+            <th mat-header-cell *matHeaderCellDef> Fill Color </th>
+            <td mat-cell *matCellDef="let geofence"> {{geofence.fillcolor}} </td>
+          </ng-container>
+          <ng-container matColumnDef="fillOpacity">
+            <th mat-header-cell *matHeaderCellDef> Fill Opacity </th>
+            <td mat-cell *matCellDef="let geofence"> {{geofence.fillopacity}} </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
