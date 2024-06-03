@@ -24,6 +24,10 @@ The Fleet Management System is an application designed to help track and manage 
   - Create and manage geofences (circular, polygon, and rectangular).
   - Monitor vehicle movements within defined geofences.
 
+- **Real-Time Vehicle Addition:**
+-The system is equipped with a real-time feature for vehicle management. When a new vehicle is added, the WebSocket connection ensures that all connected clients receive updates instantly. This functionality is achieved using the WebSocketService in Angular, which handles WebSocket connections and message broadcasting.
+
+
 ![Screenshot 2024-05-30 191350](https://github.com/maya-abdoh/Training-Project-/assets/92648274/aed8e4ba-948b-4687-bb6a-85a7030bdd66)
 
 
