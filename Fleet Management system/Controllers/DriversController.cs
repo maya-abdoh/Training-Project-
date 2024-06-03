@@ -87,23 +87,5 @@ namespace Fleet_Management_system.Controllers{
            
             return Ok(new { STS = 1 });
         }
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteDriver(long id){
-          
-            var driver = await _context.Driver.FirstOrDefaultAsync(d => d.Driverid == id);
-
-            if (driver == null){
-                return NotFound(new { STS = 0, Error = "Driver not found" });
-            }
-
-            _context.Driver.Remove(driver);
-
-            await _context.SaveChangesAsync();
-
-            return Ok(new { STS = 1 });
-
-        }
-
-
     }
 }
